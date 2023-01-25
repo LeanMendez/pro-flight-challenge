@@ -1,4 +1,7 @@
 import { useState } from 'react'
+import leftArrow from '../../assets/leftArrow.png'
+import rightArrow from '../../assets/rightArrow.png'
+import logoBrand from '../../assets/logo.png'
 import styles from './styles/LogosList.module.scss'
 
 interface Logos {
@@ -8,10 +11,10 @@ interface Logos {
 
 export const LogosList: React.FC = () => {
   const logos: Logos[] = [
-    { id: 1, logoURL: 'logo1.png' },
-    { id: 2, logoURL: 'logo2.png' },
-    { id: 3, logoURL: 'logo3.png' },
-    { id: 4, logoURL: 'logo4.png' }
+    { id: 1, logoURL: 'logo.png' },
+    { id: 2, logoURL: 'logo.png' },
+    { id: 3, logoURL: 'logo.png' },
+    { id: 4, logoURL: 'logo.png' }
   ]
   const [selectedIndexLogo, setSelectedIndexLogo] = useState<number>(1)
 
@@ -27,9 +30,9 @@ export const LogosList: React.FC = () => {
 
   return <>
   <div className={styles.container}>
-  <button onClick={previous}><img src={'./src/assets/L-arrow.png'}/></button>
-  {logos.map(logo => <img className={`${styles.images} ${selectedIndexLogo === logo.id ? styles.active : styles.inactive}`} key={logo.id} src={`./src/assets/${logo.logoURL}`}/>)}
-  <button onClick={next}><img src={'./src/assets/R-arrow.png'}/></button>
+  <button className={styles.button} onClick={previous}><img src={leftArrow}/></button>
+  {logos.map(logo => <img className={`${styles.images} ${selectedIndexLogo === logo.id ? styles.active : styles.inactive}`} key={logo.id} src={logoBrand}/>)}
+  <button className={styles.button} onClick={next}><img src={rightArrow}/></button>
   </div>
   </>
 }
