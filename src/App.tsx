@@ -1,10 +1,11 @@
-import './App.css'
+import './App.scss'
+import { LogosList } from './components/LogosList'
 
-function App() {
-
+function App (): JSX.Element {
   return (
     <div className="App">
       <h1>PRO FLIGHT</h1>
+      <LogosList/>
     </div>
   )
 }

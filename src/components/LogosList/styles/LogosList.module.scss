@@ -1,0 +1,19 @@
+.container{
+    gap: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.images{ 
+    
+background-image: linear-gradient(to right top, #8eeeff, #76def2, #5ccee6, #3dbfda, #00afce);
+    //background: linear-gradient(233.16deg, #00B0CE -10.31%, #00afce55 110.31%);;
+//background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+border-radius: 2rem;
+opacity: 0.35;
+transition: all 1s ease;
+    &.active{
+        opacity: 1;
+    }
+}
+
