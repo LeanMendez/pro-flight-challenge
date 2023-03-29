@@ -42,3 +42,6 @@ Y luego lo ejecutamos de la siguiente forma dependiendo del package manager que 
     pnpm dev
 
  ```   
+
+
+haciendo pruebas con ramas
